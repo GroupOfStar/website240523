@@ -41,10 +41,11 @@ const router = useRouter()
 
   .header_wrapper {
     max-width: 1200px;
-    padding: 10px 0;
+    padding: 24px 0;
     margin: 0px auto;
     display: flex;
     align-items: center;
+    gap: 48px;
 
     .logo_img {
       height: 60px;

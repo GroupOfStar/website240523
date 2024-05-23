@@ -36,7 +36,6 @@ provide<ComputedRef<IMenuInjection>>(MENU_PROVIDE, tabInjection)
 
 <style scoped lang="less">
 .menu_wrapper {
-  margin-left: 36px;
   display: flex;
   align-items: center;
   gap: 10px;
