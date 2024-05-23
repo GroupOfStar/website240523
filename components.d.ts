@@ -12,5 +12,7 @@ declare module 'vue' {
     MenuItem: typeof import('./src/components/Menu/MenuItem.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SubPage: typeof import('./src/components/SubPage/SubPage.vue')['default']
+    SubPageItem: typeof import('./src/components/SubPage/SubPageItem.vue')['default']
   }
 }

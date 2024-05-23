@@ -19,7 +19,7 @@ export default {
 
 <style scoped lang="less">
 .footer_wrapper {
-  position: relative;
+  width: 100%;
   font-size: 12px;
   .footer_wrapper_area {
     margin-top: 24px;

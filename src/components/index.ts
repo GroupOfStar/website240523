@@ -1,3 +1,5 @@
 export { default as Footer } from './Footer/index.vue'
 export { default as Menu } from './Menu/Menu.vue'
 export { default as MenuItem } from './Menu/MenuItem.vue'
+export { default as SubPage } from './SubPage/SubPage.vue'
+export { default as SubPageItem } from './SubPage/SubPageItem.vue'

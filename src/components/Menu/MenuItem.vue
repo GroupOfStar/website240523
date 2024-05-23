@@ -15,7 +15,7 @@ export default {
 <script setup lang="ts">
 import { inject } from 'vue'
 import { IMenuInjection, IMenuItemProps } from './interface.d'
-import { MENU_PROVIDE } from './index'
+import { MENU_PROVIDE } from './provide'
 
 defineProps<IMenuItemProps>()
 
@@ -38,3 +38,4 @@ const menuProvide = inject<IMenuInjection>(MENU_PROVIDE, {
   }
 }
 </style>
+./provide

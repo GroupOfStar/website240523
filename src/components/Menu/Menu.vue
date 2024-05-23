@@ -13,7 +13,7 @@ export default {
 import { computed, ComputedRef, provide } from 'vue'
 import { useRouter } from 'vue-router'
 import { IMenuInjection, IMenuProps } from './interface.d'
-import { MENU_PROVIDE } from './index'
+import { MENU_PROVIDE } from './provide'
 
 const props = defineProps<IMenuProps>()
 const emits = defineEmits<{
@@ -42,3 +42,4 @@ provide<ComputedRef<IMenuInjection>>(MENU_PROVIDE, tabInjection)
   gap: 10px;
 }
 </style>
+./provide
