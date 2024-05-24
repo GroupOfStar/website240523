@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import nProgress from 'nprogress'
 
 const routes: Array<RouteRecordRaw> = [
@@ -39,7 +39,7 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  history: createWebHistory('/website240523/'),
+  history: createWebHashHistory('/website240523/'),
   routes,
 })
 

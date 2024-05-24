@@ -2,7 +2,7 @@
   <SubPage title="产品中心" :img="Product" v-model="currentLabel">
     <SubPageItem label="Ethercat分支器">
       <Row :gutter="16">
-        <Col :span="8" v-for="item in branchingList" :key="item.id">
+        <Col :span="12" v-for="item in branchingList" :key="item.id">
           <Card>
             <template #cover>
               <img class="cover_img" :alt="item.title" :src="item.img" />
