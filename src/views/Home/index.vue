@@ -48,21 +48,19 @@
         <div class="title_text_en">Industry layout</div>
       </div>
       <div class="product_content">
-        <div class="product_item">
-          <div class="product_title">光纤组合导航系</div>
-          <img :src="Product01" alt="product 01" class="product_img" />
-        </div>
-        <div class="product_item">
-          <img :src="Product02" alt="product 02" class="product_img" />
-          <div class="product_title">MEMS组合导航</div>
-        </div>
-        <div class="product_item">
-          <div class="product_title">卫星接收机</div>
-          <img :src="Product03" alt="product 03" class="product_img" />
-        </div>
-        <div class="product_item">
-          <img :src="Product04" alt="product 04" class="product_img" />
-          <div class="product_title">软件类</div>
+        <div
+          class="product_item"
+          v-for="(item, index) in productList"
+          :key="item.id"
+        >
+          <template v-if="index % 2">
+            <img :src="item.img" :alt="item.title" class="product_img" />
+            <div class="product_title">{{ item.title }}</div>
+          </template>
+          <template v-else>
+            <div class="product_title">{{ item.title }}</div>
+            <img :src="item.img" :alt="item.title" class="product_img" />
+          </template>
         </div>
       </div>
     </div>
@@ -89,9 +87,11 @@ export default {
 import { useRouter } from 'vue-router'
 import { Carousel } from 'ant-design-vue'
 import { Banner01, Banner02, Company } from '@/assets'
-import { Product01, Product02, Product03, Product04 } from '@/assets/product'
+import { branchingList, converterList } from './../Product/data'
 
 const router = useRouter()
+
+const productList = [...branchingList, ...converterList]
 </script>
 
 <style scoped lang="less">
@@ -210,16 +210,22 @@ const router = useRouter()
     .product_content {
       margin-top: 24px;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
       .product_item {
         cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
         .product_title {
-          font-size: 24px;
+          font-size: 18px;
           text-align: center;
         }
+
         .product_img {
-          margin-top: 16px;
+          width: 200px;
         }
       }
     }

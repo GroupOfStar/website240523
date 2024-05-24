@@ -1,4 +1,4 @@
-export { default as Product01 } from './product01.png'
-export { default as Product02 } from './product02.png'
-export { default as Product03 } from './product03.png'
-export { default as Product04 } from './product04.png'
+export { default as Product1_01 } from './product1-01.jpg'
+export { default as Product2_01 } from './product2-01.jpg'
+export { default as Product2_02 } from './product2-02.jpg'
+export { default as Product2_03 } from './product2-03.jpg'
