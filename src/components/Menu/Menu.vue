@@ -22,7 +22,6 @@ const emits = defineEmits<{
 const router = useRouter()
 
 function onMenuChange(label: string) {
-  console.log('label :', label)
   router.push(label)
 }
 

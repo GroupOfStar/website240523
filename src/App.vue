@@ -2,7 +2,11 @@
   <ConfigProvider :locale="zhCN">
     <div class="page_wrapper">
       <div class="header_wrapper">
-        <img class="logo_img" :src="Logo" @click="() => router.push('/')" />
+        <!-- <img class="logo_img" :src="Logo" @click="() => router.push('/')" /> -->
+        <div class="logo_wrapper" @click="() => router.push('/')">
+          <div class="logo_title">汇志达</div>
+          <div class="logo_title_en">Wisda Tech</div>
+        </div>
         <Menu :modelValue="route.path">
           <MenuItem path="/home">首页</MenuItem>
           <MenuItem path="/about">关于我们</MenuItem>
@@ -28,7 +32,6 @@ import { RouterView, useRoute, useRouter } from 'vue-router'
 import { ConfigProvider } from 'ant-design-vue'
 import zhCN from 'ant-design-vue/es/locale/zh_CN'
 import { Footer, Menu, MenuItem } from '@/components'
-import { Logo } from '@/assets'
 
 const route = useRoute()
 const router = useRouter()
@@ -47,6 +50,21 @@ const router = useRouter()
     align-items: center;
     gap: 48px;
 
+    .logo_wrapper {
+      height: 60px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-family: cursive;
+      .logo_title {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      .logo_title_en {
+        font-size: 18px;
+      }
+    }
     .logo_img {
       height: 60px;
       cursor: pointer;

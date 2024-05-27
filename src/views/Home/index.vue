@@ -1,7 +1,12 @@
 <template>
   <!-- banner -->
   <div class="banner_wrapper">
-    <Carousel autoplay>
+    <Carousel :autoplay="false">
+      <div>
+        <div class="banner_item">
+          <img :src="Banner03" alt="banner" class="banner_img" />
+        </div>
+      </div>
       <div>
         <div class="banner_item">
           <img :src="Banner01" alt="banner" class="banner_img" />
@@ -24,7 +29,7 @@
             <div class="title_line"></div>
             <div class="title_text">公司简介</div>
           </div>
-          <div class="title_en">Company Profile</div>
+          <!-- <div class="title_en">Company Profile</div> -->
         </div>
         <div class="company_text">
           深圳市汇志达科技有限公司是一家集研发、生产、销售为一体的科技型公司，是工业实时通信和工业物联网领域整体解决方案提供商。
@@ -45,7 +50,7 @@
     <div class="product_wrapper">
       <div class="title_wrapper">
         <div class="title_text">产品中心</div>
-        <div class="title_text_en">Industry layout</div>
+        <!-- <div class="title_text_en">Industry layout</div> -->
       </div>
       <div class="product_content">
         <div
@@ -71,7 +76,7 @@
     <div class="news_wrapper">
       <div class="title_wrapper">
         <div class="title_text">新闻资讯</div>
-        <div class="title_text_en">News and information</div>
+        <!-- <div class="title_text_en">News and information</div> -->
       </div>
       <div class="news_content"></div>
     </div>
@@ -86,7 +91,7 @@ export default {
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 import { Carousel } from 'ant-design-vue'
-import { Banner01, Banner02, Company } from '@/assets'
+import { Banner01, Banner02, Banner03, Company } from '@/assets'
 import { branchingList, converterList } from './../Product/data'
 
 const router = useRouter()

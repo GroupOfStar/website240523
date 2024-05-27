@@ -1,6 +1,11 @@
 <template>
-  <SubPage title="服务与支持" :img="Product" v-model="currentLabel">
-    <SubPageItem label="服务与支持">
+  <SubPage title="服务与支持" :img="Service" v-model="currentLabel">
+    <SubPageItem label="售后服务">
+      <div class="service_info">
+        <a href="mailto:support@wisdatech.com">support@wisdatech.com</a>
+      </div>
+    </SubPageItem>
+    <SubPageItem label="资料下载">
       <div class="service_info"></div>
     </SubPageItem>
   </SubPage>
@@ -14,14 +19,13 @@ export default {
 <script setup lang="ts">
 import { ref } from 'vue'
 import { SubPage, SubPageItem } from '@/components'
-import { Product } from '@/assets'
+import { Service } from '@/assets'
 
-const currentLabel = ref('服务与支持')
+const currentLabel = ref('售后服务')
 </script>
 
 <style scoped lang="less">
 .service_info {
-  text-indent: 2em;
   line-height: 2em;
 }
 </style>
