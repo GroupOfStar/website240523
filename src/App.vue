@@ -5,7 +5,7 @@
         <!-- <img class="logo_img" :src="Logo" @click="() => router.push('/')" /> -->
         <div class="logo_wrapper" @click="() => router.push('/')">
           <div class="logo_title">汇志达</div>
-          <div class="logo_title_en">Wisda Tech</div>
+          <div class="logo_title_en">WisdaTech</div>
         </div>
         <Menu :modelValue="route.path">
           <MenuItem path="/home">首页</MenuItem>
@@ -56,6 +56,7 @@ const router = useRouter()
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      align-items: center;
       font-family: cursive;
       .logo_title {
         font-size: 30px;

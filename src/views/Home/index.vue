@@ -7,7 +7,7 @@
           <img :src="Banner03" alt="banner" class="banner_img" />
         </div>
       </div>
-      <div>
+      <!-- <div>
         <div class="banner_item">
           <img :src="Banner01" alt="banner" class="banner_img" />
         </div>
@@ -16,7 +16,7 @@
         <div class="banner_item">
           <img :src="Banner02" alt="banner" class="banner_img" />
         </div>
-      </div>
+      </div> -->
     </Carousel>
   </div>
 
@@ -77,6 +77,22 @@
       <div class="title_wrapper">
         <div class="title_text">新闻资讯</div>
         <!-- <div class="title_text_en">News and information</div> -->
+        <div class="news_content">
+          <Row :gutter="[24, 24]" wrap>
+            <Col :span="6" v-for="item in solutionList" :key="item.id">
+              <Card>
+                <template #cover>
+                  <img class="cover_img" :alt="item.title" :src="item.img" />
+                </template>
+                <Card.Meta>
+                  <template #title>
+                    <div class="title_img">{{ item.title }}</div>
+                  </template>
+                </Card.Meta>
+              </Card>
+            </Col>
+          </Row>
+        </div>
       </div>
       <div class="news_content"></div>
     </div>
@@ -90,9 +106,10 @@ export default {
 </script>
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
-import { Carousel } from 'ant-design-vue'
-import { Banner01, Banner02, Banner03, Company } from '@/assets'
+import { Carousel, Card, Row, Col } from 'ant-design-vue'
+import { Banner03, Company } from '@/assets'
 import { branchingList, converterList } from './../Product/data'
+import { solutionList } from './../Solution/data'
 
 const router = useRouter()
 
