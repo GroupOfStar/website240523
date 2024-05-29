@@ -1,4 +1,9 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+import {
+  createRouter,
+  createWebHistory,
+  createWebHashHistory,
+  RouteRecordRaw,
+} from 'vue-router'
 import nProgress from 'nprogress'
 
 const routes: Array<RouteRecordRaw> = [
@@ -38,8 +43,12 @@ const routes: Array<RouteRecordRaw> = [
   },
 ]
 
+const BASE_URL = import.meta.env.BASE_URL
+
 const router = createRouter({
-  history: createWebHashHistory('/website240523/'),
+  history: import.meta.env.DEV
+    ? createWebHashHistory(BASE_URL)
+    : createWebHistory(BASE_URL),
   routes,
 })
 

@@ -4,9 +4,11 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "dev": "vite --mode dev",
+    "build:aliyun": "vue-tsc && vite build --mode aliyun",
+    "build:github": "vue-tsc && vite build --mode github",
+    "preview:aliyun": "vite preview --mode aliyun",
+    "preview:github": "vite preview --mode github"
   },
   "dependencies": {
     "ant-design-vue": "^4.2.1",
