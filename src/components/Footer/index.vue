@@ -1,10 +1,21 @@
 <template>
   <div class="footer_wrapper">
-    <div class="footer_wrapper_area"></div>
-    <div class="footer">
+    <div
+      class="footer_wrapper_area"
+      :style="{ height: `${shimHeight}px` }"
+    ></div>
+    <div class="footer" ref="footerRef">
       <div class="copyright">
-        2023-2025 &copy; 深圳市汇志达科技有限公司。 Copyright &copy; 2024 ALL
-        Rights Reserved
+        Copyright © 2024 深圳市汇志达科技有限公司. All Rights Reserved.
+      </div>
+      <div class="filing">
+        <img src="https://beian.mps.gov.cn/img/logo01.dd7ff50e.png" />
+        <a
+          target="_blank"
+          href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=4403070200xxxx"
+        >
+          深公网安备4403070200xxxx号
+        </a>
       </div>
     </div>
   </div>
@@ -15,7 +26,20 @@ export default {
   name: 'Footer',
 }
 </script>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref, onMounted } from 'vue'
+
+const footerRef = ref<HTMLElement>()
+
+const shimHeight = ref<number>(0)
+
+onMounted(() => {
+  const footerDom = footerRef.value
+  if (footerDom) {
+    shimHeight.value = footerDom.getBoundingClientRect().height
+  }
+})
+</script>
 
 <style scoped lang="less">
 .footer_wrapper {
@@ -26,16 +50,27 @@ export default {
     height: 68px;
   }
   .footer {
-    height: 68px;
     width: 100%;
     padding: 24px 0;
-    height: 68px;
     text-align: center;
     background-color: #323238ed;
     position: absolute;
     bottom: 0;
     .copyright {
       color: gray;
+    }
+    .filing {
+      margin-top: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      img {
+        width: 16px;
+      }
+      a {
+        color: gray;
+      }
     }
   }
 }
