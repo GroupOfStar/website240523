@@ -9,12 +9,9 @@
         Copyright © 2024 深圳市汇志达科技有限公司. All Rights Reserved.
       </div>
       <div class="filing">
-        <img src="https://beian.mps.gov.cn/img/logo01.dd7ff50e.png" />
-        <a
-          target="_blank"
-          href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=4403070200xxxx"
-        >
-          深公网安备4403070200xxxx号
+        <img src="/gov.png" />
+        <a href="https://beian.miit.gov.cn" target="_blank">
+          粤ICP备2024261115号-1
         </a>
       </div>
     </div>
